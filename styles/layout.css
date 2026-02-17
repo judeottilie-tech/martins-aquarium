@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── Variables ─────────────────────────────────────── */
+:root {
+    --ocean-deep:   #0a1628;
+    --ocean-mid:    #0e2a4a;
+    --ocean-light:  #1a4a7a;
+    --seafoam:      #22888f;
+    --seafoam-dim:  #00302c;
+    --sand:         #f7e2c4;
+    --sand-dark:    #ccc4b5;
+    --coral:        #db8871;
+    --text-primary: #f0f4f8;
+    --text-muted:   #8faec7;
+    --card-bg:      rgba(255, 255, 255, 0.04);
+    --card-border:  rgba(184, 255, 250, 0.15);
+    --card-shadow:  0 4px 24px rgba(10, 63, 45, 0.35);
+    --radius-sm:    8px;
+    --radius-md:    14px;
+    --radius-lg:    20px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--ocean-light);
+    color: var(--text-seafoam-light);
+    min-height: 100vh;
+
+    background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(14, 42, 74, 0.8) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(24, 129, 38, 0.4) 0%, transparent 50%),
+        radial-gradient(ellipse at 60% 80%, rgba(0, 1, 2, 0.9) 0%, transparent 55%);
+}
+
+header {
+    text-align: center;
+    padding: 2.5rem 2rem 2rem;
+    border-bottom: 5px solid var(--card-border);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(78, 205, 196, 0.06) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--text-primary);
+    position: relative;
+}
+
+header h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--seafoam), var(--coral));
+    margin: 0.6rem auto 0;
+    border-radius: 2px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "fish   tips"
+        "locs   tips";
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+#fish-list,
+#location-list,
+#tip-list {
+    background: var(--card-bg);
+    border: 5px solid var(--card-border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    backdrop-filter: blur(6px);
+}
+
+#fish-list::before,
+#location-list::before,
+#tip-list::before {
+    display: block;
+    font-family: 'Arial', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--seafoam);
+    letter-spacing: 0.03em;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 5px solid var(--card-border);
+}
+
+#fish-list::before     { content: 'Fish'; }
+#location-list::before { content: 'Locations'; }
+#tip-list::before      { content: 'Tips'; }
+
+#fish-list {
+    grid-area: fish;
+}
+
+#fish-list .fish-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+#fish-list .fish-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow);
+    border-color: var(--seafoam-dim);
+}
+
+#fish-list .fish-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--sand);
+    margin-bottom: 0.4rem;
+}
+
+#fish-list .fish-card p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 0.2rem;
+}
+
+#fish-list .fish-card img {
+    width: 75%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    margin-top: 0.75rem;
+    display: block;
+}
+
+#fish-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+#fish-list::before {
+    grid-column: 1 / -1;
+}
+
+#location-list {
+    grid-area: locs;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+#location-list::before {
+    grid-column: 1 / -1;
+}
+
+#location-list article {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+#location-list article:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow);
+    border-color: var(--seafoam-dim);
+}
+
+#location-list article h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--sand);
+    margin-bottom: 0.4rem;
+}
+
+#location-list article p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+}
+
+#tip-list {
+    grid-area: tips;
+    position: sticky;
+    top: 1.5rem;
+    align-self: start;
+}
+
+#tip-list ul.tips {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+#tip-list li.tip {
+    padding: 0.8rem 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-left: 3px solid var(--seafoam --ocean-light);
+    border-radius: var(--radius-sm);
+    transition: border-left-color 0.2s ease;
+}
+
+#tip-list li.tip:hover {
+    border-left-color: var(--coral);
+}
+
+#tip-list li.tip h3 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--seafoam);
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+#tip-list li.tip p {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "fish"
+            "tips"
+            "locs";
+    }
+
+    #tip-list {
+        position: static;
+    }
+}
+
+@media (max-width: 560px) {
+    #fish-list,
+    #location-list {
+        grid-template-columns: 1fr;
+    }
+}
