@@ -19,7 +19,7 @@ export const database = {
         {
             name: "Bruce",
             species: "Great White Shark",
-            length: 15,
+            length: 20,
             location: "Indian Ocean",
             diet: "Carnivore",
             image: "https://upload.wikimedia.org/wikipedia/commons/5/56/White_shark.jpg"
@@ -83,7 +83,7 @@ export const database = {
         {
             name: "Marlin",
             species: "Blue Marlin",
-            length: 45,
+            length: 40,
             location: "Atlantic Ocean",
             diet: "Carnivore",
             image: "https://fishflags.com/cdn/shop/articles/blue.marlin.enio.morales_1100x.jpg?v=1589410327"
@@ -107,7 +107,7 @@ export const database = {
         {
             name: "Spike",
             species: "Swordfish",
-            length: 15,
+            length: 20,
             location: "Mediterranean Sea",
             diet: "Carnivore",
             image: "https://seahistory.org/wp-content/uploads/swordfish-2.jpg"
