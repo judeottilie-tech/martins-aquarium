@@ -51,7 +51,7 @@ export const database = {
         {
             name: "Splash",
             species: "Atlantic Salmon",
-            length: 30,
+            length: 20,
             location: "North Atlantic Ocean",
             diet: "Carnivore",
             image: "https://static.inaturalist.org/photos/1020642/large.jpg"
@@ -83,7 +83,7 @@ export const database = {
         {
             name: "Marlin",
             species: "Blue Marlin",
-            length: 40,
+            length: 20,
             location: "Atlantic Ocean",
             diet: "Carnivore",
             image: "https://fishflags.com/cdn/shop/articles/blue.marlin.enio.morales_1100x.jpg?v=1589410327"
@@ -91,7 +91,7 @@ export const database = {
         {
             name: "Sunny",
             species: "Sunfish",
-            length: 10,
+            length: 20,
             location: "Temperate Oceans",
             diet: "Carnivore",
             image: "https://img1.wsimg.com/isteam/ip/c62a16d6-a784-41fb-b95b-6adff6e5c42c/IMG_3954.JPG/:/rs=w:1280"
