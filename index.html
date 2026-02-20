@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Martin's Aquarium</title>
-   <link rel="stylesheet" href="./styles/main.css">
-   <link rel="stylesheet" href="./styles/layout.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin's Aquarium</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/layout.css">
 </head>
+
 <body>
-   <header>
-       <h1>Martin's Aquarium</h1>
-   </header>
-   <main>
-       <section id="fish-list">
-           <!-- Fish grid will be dynamically generated here -->
-       </section>
+    <header>
+        <h1>Martin's Aquarium</h1>
+    </header>
+<main>
+    <div id="fish-wrapper">
+        <h2>The Chosen of Jutz'kar</h2>
+        <section id="holy-fish-list"></section>
 
-       <li id="tip-list">
-           <!-- Care tips will be dynamically generated here -->
-       </li>
+        <h2>Soldiers of Jutz'kar</h2>
+        <section id="soldier-fish-list"></section>
 
-       <section id="location-list">
-           <!-- Location grid will be dynamically generated here -->
-       </section>
-   </main>
-<script type="module" src="./scripts/main.js"></script>
+        <h2>The Unworthy</h2>
+        <section id="regular-fish-list"></section>
+    </div>
 
+    <div id="tip-list"></div>
+
+    <section id="location-list"></section>
+</main>
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>

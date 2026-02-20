@@ -91,7 +91,9 @@ main {
     align-items: start;
 }
 
-#fish-list,
+#holy-fish-list,
+#soldier-fish-list, 
+#regular-fish-list,
 #location-list,
 #tip-list {
     background: var(--card-bg);
@@ -101,7 +103,9 @@ main {
     backdrop-filter: blur(6px);
 }
 
-#fish-list::before,
+#holy-fish-list::before,
+#soldier-fish-list::before, 
+#regular-fish-list::before,
 #location-list::before,
 #tip-list::before {
     display: block;
@@ -115,15 +119,21 @@ main {
     border-bottom: 5px solid var(--card-border);
 }
 
-#fish-list::before     { content: 'Fish'; }
+#holy-fish-list::before,
+#soldier-fish-list::before, 
+#regular-fish-list::before { content: 'Fish'; }
 #location-list::before { content: 'Locations'; }
 #tip-list::before      { content: 'Tips'; }
 
-#fish-list {
+#holy-fish-list,
+#soldier-fish-list,
+#regular-fish-list {
     grid-area: fish;
 }
 
-#fish-list .fish-card {
+#holy-fish-list .fish-card,
+#soldier-fish-list .fish-card,
+#regular-fish-list .fish-card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: var(--radius-md);
@@ -131,42 +141,53 @@ main {
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-#fish-list .fish-card:hover {
+#holy-fish-list .fish-card:hover,
+#soldier-fish-list .fish-card:hover,
+#regular-fish-list .fish-card:hover {
     transform: translateY(-3px);
     box-shadow: var(--card-shadow);
     border-color: var(--seafoam-dim);
 }
 
-#fish-list .fish-card h3 {
+#holy-fish-list .fish-card h3,
+#soldier-fish-list .fish-card h3,
+#regular-fish-list .fish-card h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1rem;
     color: var(--sand);
     margin-bottom: 0.4rem;
 }
-
-#fish-list .fish-card p {
+#holy-fish-list .fish-card p,
+#soldier-fish-list .fish-card p,
+#regular-fish-list .fish-card p {
     font-size: 0.8rem;
     color: var(--text-muted);
     line-height: 1.5;
     margin-bottom: 0.2rem;
 }
 
-#fish-list .fish-card img {
-    width: 75%;
-    height: 50%;
+#holy-fish-list .fish-card img,
+#soldier-fish-list .fish-card img,
+#regular-fish-list .fish-card img {
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: var(--radius-sm);
     margin-top: 0.75rem;
     display: block;
 }
 
-#fish-list {
+#holy-fish-list,
+#soldier-fish-list, 
+#regular-fish-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
 
-#fish-list::before {
+#holy-fish-list::before,
+#soldier-fish-list::before, 
+#regular-fish-list::before {
     grid-column: 1 / -1;
 }
 
